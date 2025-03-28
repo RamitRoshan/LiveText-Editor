@@ -1,50 +1,27 @@
-# React + TypeScript + Vite
+# 📝 Real-Time Collaborative Text Editor with React & Firebase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the **Real-Time Collaborative Text Editor**! This project is designed to provide a **Google Docs-like** experience, allowing multiple users to edit the same document **simultaneously** with **live updates**. 
 
-Currently, two official plugins are available:
+## 🚀 Project Overview
+This **React-based** text editor leverages **Firebase Firestore** for real-time synchronization, ensuring that changes made by one user instantly reflect on all connected clients. The UI is built with **React Quill**, offering a rich text editing experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
+- **🔄 Real-Time Collaboration** – Multiple users can edit the same document, and changes sync instantly.
+- **🔥 Firebase Firestore Integration** – Uses Firestore's real-time database for efficient data syncing.
+- **📄 Google Docs-Like UI** – A familiar and intuitive interface for seamless editing.
+- **📡 Optimized Editing** – Detects idle periods to reduce unnecessary database writes.
 
-## Expanding the ESLint configuration
+## 🛠️ How It Works
+- **Text Synchronization**: Firebase Firestore listens for document changes and updates all users in real-time.
+- **Throttle Optimization**: Limits excessive database writes by saving changes at controlled intervals.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🏗️ Code Breakdown
+- **`Editor.tsx`** – Main editor component with Firebase document synchronization and real-time cursor tracking.
+- **`firebase-config.js`** – Firebase configuration for Firestore integration.
+- **`styles.css`** – Custom styling to resemble Google Docs.
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+###  Run the Project
+npm run dev
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+💡 **Made by ❤️ Ramit Roshan using React, Firebase & Quill**

@@ -24,4 +24,7 @@ This **React-based** text editor leverages **Firebase Firestore** for real-time 
 ###  Run the Project
 npm run dev
 
+## 🚀 Deployment
+- [Live Demo](https://live-text-editor-eight.vercel.app/)
+
 💡 **Made by ❤️ Ramit Roshan using React, Firebase & Quill**
